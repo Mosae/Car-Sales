@@ -10,7 +10,7 @@ import { Provider } from 'react-redux';
 
 //Step 1 - Create store and connect to the react app
 const store = createStore(carReducer);
-console.log('This is the store: ', store);
+console.log('Current state: ', store.getState());
 
 const rootElement = document.getElementById('root');
 ReactDOM.render(

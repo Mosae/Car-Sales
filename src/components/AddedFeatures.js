@@ -20,5 +20,5 @@ const AddedFeatures = (props) => {
 };
 
 export default connect(() => {
-	return { newProp: 'green' };
+	return { features: ['spoiler'] };
 })(AddedFeatures);

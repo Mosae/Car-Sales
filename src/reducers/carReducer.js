@@ -15,4 +15,7 @@ export const initialState = {
 	],
 };
 
-export const carReducer = (state, action) => {};
+export const carReducer = (state = initialState, action) => {
+	console.log('This is the init state', state);
+	console.log('This is the action', action);
+};

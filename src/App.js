@@ -6,7 +6,7 @@ import AdditionalFeatures from './components/AdditionalFeatures';
 import Total from './components/Total';
 
 //Step 1 - Create store and connect to the react app
-const store = createStore(App);
+const store = createStore();
 console.log(store);
 
 const App = () => {

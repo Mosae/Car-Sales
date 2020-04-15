@@ -2,11 +2,8 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 const AddedFeature = (props) => {
-	console.log('added props', props);
 	const removeFeature = () => {
 		//remove feature
-
-		console.log('removeFeature Clicked');
 	};
 	return (
 		<li>
@@ -19,13 +16,13 @@ const AddedFeature = (props) => {
 	);
 };
 
-const mapStateToProps = (state) => {
-	console.log(state);
-	return {
-		featuresOnProps: [],
-	};
-};
+// const mapStateToProps = (state) => {
+// 	return {
+// 		featuresOnProps: [],
+// 	};
+// };
 
-export default connect(() => {
-	return { newProp: 'green' };
+export default connect((state) => {
+	console.log(state);
+	return { name: 'cobra' };
 })(AddedFeature);

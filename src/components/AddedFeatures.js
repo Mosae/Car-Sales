@@ -19,6 +19,7 @@ const AddedFeatures = (props) => {
 	);
 };
 
-export default connect(() => {
+export default connect((state) => {
+	console.log(state);
 	return { features: ['spoiler'] };
 })(AddedFeatures);

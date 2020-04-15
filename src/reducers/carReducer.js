@@ -16,6 +16,33 @@ export const initialState = {
 };
 
 export const carReducer = (state = initialState, action) => {
-	console.log('This is the init state', state);
-	console.log('This is the action', action);
+	// console.log('This is the init state', state);
+	// console.log('This is the action', action);
+
+	switch (action.type) {
+		case 'ADD_ITEM':
+			return {
+				...state,
+				additionalPrice: state.additionalPrice + action.payload.price,
+				car: {
+					...state.car,
+					features: [...state.car.features, action.payload],
+				},
+			};
+		case 'REMOVE_ITEM':
+			return {
+				...state,
+				additionalPrice: state.additionalPrice - action.payload.price,
+				car: {
+					...state.car,
+					features: [
+						...state.car.features.filter(
+							(item) => item.id !== action.payload.id
+						),
+					],
+				},
+			};
+		default:
+			return state;
+	}
 };

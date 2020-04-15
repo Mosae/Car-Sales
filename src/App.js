@@ -8,10 +8,6 @@ import AdditionalFeatures from './components/AdditionalFeatures';
 import Total from './components/Total';
 import { carReducer } from './reducers/carReducer';
 
-//Step 1 - Create store and connect to the react app
-const store = createStore(carReducer);
-console.log(store);
-
 const App = () => {
 	const state = {
 		additionalPrice: 0,
